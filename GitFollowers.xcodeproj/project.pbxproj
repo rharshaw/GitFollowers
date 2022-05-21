@@ -27,6 +27,7 @@
 		9642EA65282C6C89006B87DE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9642EA64282C6C89006B87DE /* User.swift */; };
 		9642EA68282C7DDE006B87DE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9642EA67282C7DDE006B87DE /* NetworkManager.swift */; };
 		9642EA6B282C94B5006B87DE /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9642EA6A282C94B5006B87DE /* ErrorMessage.swift */; };
+		9695A68A283838DD00E04374 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9695A689283838DD00E04374 /* UIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		9642EA64282C6C89006B87DE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9642EA67282C7DDE006B87DE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9642EA6A282C94B5006B87DE /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		9695A689283838DD00E04374 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				9642EA6A282C94B5006B87DE /* ErrorMessage.swift */,
+				9695A689283838DD00E04374 /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				9607EEF428297D6C00EB41C8 /* AppDelegate.swift in Sources */,
 				9607EF12282B22D600EB41C8 /* String+Ext.swift in Sources */,
 				9642EA6B282C94B5006B87DE /* ErrorMessage.swift in Sources */,
+				9695A68A283838DD00E04374 /* UIHelper.swift in Sources */,
 				9642EA68282C7DDE006B87DE /* NetworkManager.swift in Sources */,
 				9607EEF628297D6C00EB41C8 /* SceneDelegate.swift in Sources */,
 				9607EF18282B466D00EB41C8 /* GitFollowersAlertViewController.swift in Sources */,
