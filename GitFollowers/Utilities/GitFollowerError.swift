@@ -1,5 +1,5 @@
 //
-//  ErrorMessage.swift
+//  GitFollowerError.swift
 //  GitFollowers
 //
 //  Created by Rian Harshaw on 5/11/22.
