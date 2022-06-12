@@ -32,6 +32,7 @@
 		9690887B2853F77E001DC1F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9690887A2853F77E001DC1F2 /* Constants.swift */; };
 		9694A23128493B7C007D37B6 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694A23028493B7C007D37B6 /* UserInfoViewController.swift */; };
 		9695A68A283838DD00E04374 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9695A689283838DD00E04374 /* UIHelper.swift */; };
+		96BE2CBB2856A0F8002C3B24 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE2CBA2856A0F8002C3B24 /* Date+Ext.swift */; };
 		96C942952854161800A8B7B7 /* ItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C942942854161800A8B7B7 /* ItemInfoView.swift */; };
 		96C9429728541AF500A8B7B7 /* ItemInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C9429628541AF500A8B7B7 /* ItemInfoViewController.swift */; };
 		96C942992854D96800A8B7B7 /* RepoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C942982854D96800A8B7B7 /* RepoItemViewController.swift */; };
@@ -67,6 +68,7 @@
 		9690887A2853F77E001DC1F2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9694A23028493B7C007D37B6 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		9695A689283838DD00E04374 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		96BE2CBA2856A0F8002C3B24 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		96C942942854161800A8B7B7 /* ItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoView.swift; sourceTree = "<group>"; };
 		96C9429628541AF500A8B7B7 /* ItemInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoViewController.swift; sourceTree = "<group>"; };
 		96C942982854D96800A8B7B7 /* RepoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoItemViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				9607EF11282B22D600EB41C8 /* String+Ext.swift */,
 				9607EF19282B596500EB41C8 /* UIViewController+Ext.swift */,
+				96BE2CBA2856A0F8002C3B24 /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				9607EF12282B22D600EB41C8 /* String+Ext.swift in Sources */,
 				96C9429728541AF500A8B7B7 /* ItemInfoViewController.swift in Sources */,
 				9642EA6B282C94B5006B87DE /* GitFollowerError.swift in Sources */,
+				96BE2CBB2856A0F8002C3B24 /* Date+Ext.swift in Sources */,
 				9695A68A283838DD00E04374 /* UIHelper.swift in Sources */,
 				9642EA68282C7DDE006B87DE /* NetworkManager.swift in Sources */,
 				9607EEF628297D6C00EB41C8 /* SceneDelegate.swift in Sources */,

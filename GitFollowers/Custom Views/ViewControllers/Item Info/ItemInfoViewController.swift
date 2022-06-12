@@ -15,6 +15,7 @@ class ItemInfoViewController: UIViewController {
     let actionButton = GitFollowerButton()
     
     var user: User!
+    var delegate: UserInfoViewControllerDelegate!
 
     
     init(user: User) {
