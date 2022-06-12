@@ -29,8 +29,13 @@
 		9642EA6B282C94B5006B87DE /* GitFollowerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9642EA6A282C94B5006B87DE /* GitFollowerError.swift */; };
 		96908877285185D0001DC1F2 /* UserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96908876285185D0001DC1F2 /* UserInfoHeader.swift */; };
 		969088792851862F001DC1F2 /* SecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969088782851862F001DC1F2 /* SecondaryTitleLabel.swift */; };
+		9690887B2853F77E001DC1F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9690887A2853F77E001DC1F2 /* Constants.swift */; };
 		9694A23128493B7C007D37B6 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694A23028493B7C007D37B6 /* UserInfoViewController.swift */; };
 		9695A68A283838DD00E04374 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9695A689283838DD00E04374 /* UIHelper.swift */; };
+		96C942952854161800A8B7B7 /* ItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C942942854161800A8B7B7 /* ItemInfoView.swift */; };
+		96C9429728541AF500A8B7B7 /* ItemInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C9429628541AF500A8B7B7 /* ItemInfoViewController.swift */; };
+		96C942992854D96800A8B7B7 /* RepoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C942982854D96800A8B7B7 /* RepoItemViewController.swift */; };
+		96C9429B2854DB9F00A8B7B7 /* FollowerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C9429A2854DB9F00A8B7B7 /* FollowerItemViewController.swift */; };
 		96F93C15283F10C5007C1900 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F93C14283F10C5007C1900 /* EmptyStateView.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,8 +64,13 @@
 		9642EA6A282C94B5006B87DE /* GitFollowerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitFollowerError.swift; sourceTree = "<group>"; };
 		96908876285185D0001DC1F2 /* UserInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoHeader.swift; sourceTree = "<group>"; };
 		969088782851862F001DC1F2 /* SecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryTitleLabel.swift; sourceTree = "<group>"; };
+		9690887A2853F77E001DC1F2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9694A23028493B7C007D37B6 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		9695A689283838DD00E04374 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		96C942942854161800A8B7B7 /* ItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoView.swift; sourceTree = "<group>"; };
+		96C9429628541AF500A8B7B7 /* ItemInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoViewController.swift; sourceTree = "<group>"; };
+		96C942982854D96800A8B7B7 /* RepoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoItemViewController.swift; sourceTree = "<group>"; };
+		96C9429A2854DB9F00A8B7B7 /* FollowerItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerItemViewController.swift; sourceTree = "<group>"; };
 		96F93C14283F10C5007C1900 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,14 +191,26 @@
 			children = (
 				9642EA6A282C94B5006B87DE /* GitFollowerError.swift */,
 				9695A689283838DD00E04374 /* UIHelper.swift */,
+				9690887A2853F77E001DC1F2 /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		96C9429C2854DBEC00A8B7B7 /* Item Info */ = {
+			isa = PBXGroup;
+			children = (
+				96C9429A2854DB9F00A8B7B7 /* FollowerItemViewController.swift */,
+				96C942982854D96800A8B7B7 /* RepoItemViewController.swift */,
+				96C9429628541AF500A8B7B7 /* ItemInfoViewController.swift */,
+			);
+			path = "Item Info";
 			sourceTree = "<group>";
 		};
 		96F93C0E283F0FE9007C1900 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				96F93C14283F10C5007C1900 /* EmptyStateView.swift */,
+				96C942942854161800A8B7B7 /* ItemInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +242,7 @@
 		96F93C12283F1017007C1900 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				96C9429C2854DBEC00A8B7B7 /* Item Info */,
 				9607EF17282B466D00EB41C8 /* GitFollowersAlertViewController.swift */,
 				96908876285185D0001DC1F2 /* UserInfoHeader.swift */,
 			);
@@ -308,11 +331,13 @@
 			files = (
 				9607EF14282B437300EB41C8 /* GitFollowersTitleLabel.swift in Sources */,
 				9694A23128493B7C007D37B6 /* UserInfoViewController.swift in Sources */,
+				96C9429B2854DB9F00A8B7B7 /* FollowerItemViewController.swift in Sources */,
 				9607EF0C282AFA5200EB41C8 /* GitFollowerButton.swift in Sources */,
 				96908877285185D0001DC1F2 /* UserInfoHeader.swift in Sources */,
 				96F93C15283F10C5007C1900 /* EmptyStateView.swift in Sources */,
 				961CA1032830176A007C5CED /* GitFollowerAvatarImageView.swift in Sources */,
 				9607EF1A282B596500EB41C8 /* UIViewController+Ext.swift in Sources */,
+				96C942952854161800A8B7B7 /* ItemInfoView.swift in Sources */,
 				9607EF0A2829FF7400EB41C8 /* FavoriteListViewController.swift in Sources */,
 				969088792851862F001DC1F2 /* SecondaryTitleLabel.swift in Sources */,
 				9607EF0E282AFE0400EB41C8 /* GitFollowerTextField.swift in Sources */,
@@ -321,14 +346,17 @@
 				961CA1012830163B007C5CED /* FollowerCell.swift in Sources */,
 				9607EF16282B457400EB41C8 /* GitFollowersBodyLabel.swift in Sources */,
 				9642EA63282C6BC5006B87DE /* Follower.swift in Sources */,
+				96C942992854D96800A8B7B7 /* RepoItemViewController.swift in Sources */,
 				9607EF082829FF4800EB41C8 /* SearchViewController.swift in Sources */,
 				9607EEF428297D6C00EB41C8 /* AppDelegate.swift in Sources */,
 				9607EF12282B22D600EB41C8 /* String+Ext.swift in Sources */,
+				96C9429728541AF500A8B7B7 /* ItemInfoViewController.swift in Sources */,
 				9642EA6B282C94B5006B87DE /* GitFollowerError.swift in Sources */,
 				9695A68A283838DD00E04374 /* UIHelper.swift in Sources */,
 				9642EA68282C7DDE006B87DE /* NetworkManager.swift in Sources */,
 				9607EEF628297D6C00EB41C8 /* SceneDelegate.swift in Sources */,
 				9607EF18282B466D00EB41C8 /* GitFollowersAlertViewController.swift in Sources */,
+				9690887B2853F77E001DC1F2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
