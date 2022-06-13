@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FollowerListViewControllerDelegate: class {
+    func didRequestFollowers(for username: String)
+}
+
 class FollowersListViewController: UIViewController {
     
     enum Section { case main }
@@ -55,6 +59,9 @@ class FollowersListViewController: UIViewController {
     func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
     }
     
     
@@ -118,11 +125,16 @@ extension FollowersListViewController: UICollectionViewDelegate {
         let follower = activeArray[indexPath.item]
         
         let destination = UserInfoViewController()
+        destination.username = follower.login
+        destination.delegate = self
         let navigationController = UINavigationController(rootViewController: destination)
         
-        destination.username = follower.login
         
         present(navigationController, animated: true)
+    }
+    
+    @objc func addButtonTapped() {
+        print("Add button tapped")
     }
 }
 
@@ -139,3 +151,14 @@ extension FollowersListViewController: UISearchResultsUpdating, UISearchBarDeleg
     }
 }
 
+extension FollowersListViewController: FollowerListViewControllerDelegate {
+    func didRequestFollowers(for username: String) {
+        self.username = username
+        title = username
+        page = 1
+        followers.removeAll()
+        filteredFollowers.removeAll()
+        collectionView.setContentOffset(.zero, animated: true)
+        getFollowers(username: username, page: page)
+    }
+}

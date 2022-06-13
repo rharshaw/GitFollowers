@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import SafariServices
 
 protocol UserInfoViewControllerDelegate: class {
-    func didTapGitHubProfile()
-    func didTapGetFollowers()
+    func didTapGitHubProfile(for user: User)
+    func didTapGetFollowers(for user: User)
 }
 
 class UserInfoViewController: UIViewController {
@@ -20,6 +21,7 @@ class UserInfoViewController: UIViewController {
     var itemViews = [UIView]()
     
     var username: String!
+    weak var delegate: FollowerListViewControllerDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,14 +110,21 @@ class UserInfoViewController: UIViewController {
 }
 
 extension UserInfoViewController: UserInfoViewControllerDelegate {
-    func didTapGitHubProfile() {
-        // Show safari view controller
+    func didTapGitHubProfile(for user: User) {
+        guard let url = URL(string: user.htmlUrl) else {
+            presentGitFollowerAlertOnMainThread(title: "Invalid URL", message: "The url attached to this user is invalid", buttonTitle: "OK")
+            return
+        }
+        
+        presentSafariViewController(with: url)
     }
     
-    func didTapGetFollowers() {
-        // Dismiss View Controller
-        // tell Follower List Screen the new user
+    func didTapGetFollowers(for user: User) {
+        guard user.followers != 0 else {
+            presentGitFollowerAlertOnMainThread(title: "Whoops!", message: "This user has no followers.", buttonTitle: "Brutal")
+            return
+        }
+        delegate.didRequestFollowers(for: user.login)
+        dismissViewController()
     }
-    
-    
 }

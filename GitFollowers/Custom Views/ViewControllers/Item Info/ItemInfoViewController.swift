@@ -15,7 +15,7 @@ class ItemInfoViewController: UIViewController {
     let actionButton = GitFollowerButton()
     
     var user: User!
-    var delegate: UserInfoViewControllerDelegate!
+    weak var delegate: UserInfoViewControllerDelegate!
 
     
     init(user: User) {
@@ -32,8 +32,16 @@ class ItemInfoViewController: UIViewController {
         configureBackgroundView()
         layoutUI()
         configureStackView()
+        configureActionButton()
     }
 
+    private func configureActionButton() {
+        actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func actionButtonTapped() {
+        
+    }
     
    private func configureBackgroundView() {
         view.layer.cornerRadius = 18
