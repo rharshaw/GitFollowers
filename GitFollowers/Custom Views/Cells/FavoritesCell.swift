@@ -22,6 +22,11 @@ class FavoritesCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func set(favorite: Follower) {
+        avatarImageView.downloadImage(from: favorite.avatarUrl)
+        usernameLabel.text = favorite.login
+    }
+    
     private func configure() {
         addSubview(avatarImageView)
         addSubview(usernameLabel)
@@ -37,7 +42,9 @@ class FavoritesCell: UITableViewCell {
             avatarImageView.heightAnchor.constraint(equalToConstant: 60),
             
             usernameLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            usernameLabel.leadingAnchor.constraint(equalTo: <#T##NSLayoutAnchor<NSLayoutXAxisAnchor>#>)
+            usernameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 24),
+            usernameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -padding),
+            usernameLabel.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     
